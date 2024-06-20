@@ -51,7 +51,7 @@ const FSEMap = React.memo(function FSEMap(props) {
     if (mapRef.current) { return; }
     const canvas = new Canvas({ padding: 0.5 });
     mapRef.current = L.map('map', {
-      center: [46.5344, 3.42167],
+      center: [38.514661, -121.492851],
       zoom: 6,
       minZoom: 2,
       maxZoom: 17,
