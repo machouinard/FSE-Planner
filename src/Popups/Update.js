@@ -43,6 +43,8 @@ import aircrafts from "../data/aircraft.json";
 
 const storage = new Storage();
 
+const update = storage.get('settings', {}).update;
+
 function NetworkError(code) {
   this.code = code;
 }
@@ -525,7 +527,9 @@ function UpdatePopup(props) {
     storage.set('jobsLayers', jobsLayers.map(elm => elm.id));
     // Close popup
     setLoading(false);
-    handleClose();
+    if ( update && ! update.persistModal ) {
+      handleClose();
+    }
   }
   // Jobs Update button clicked
   const updateJobs = (evt) => {
@@ -568,7 +572,9 @@ function UpdatePopup(props) {
     setJobsTime(null);
     // Close popup
     setLoading(false);
-    handleClose();
+    if ( update && ! update.persistModal ) {
+      handleClose();
+    }
   }
 
   // Loop function to get planes from FSE
@@ -669,7 +675,9 @@ function UpdatePopup(props) {
         storage.set('planeUser', planeUser);
         // Close popup
         setLoading(false);
-        handleClose();
+        if ( update && ! update.persistModal ) {
+          handleClose();
+        }
       });
     });
   }
@@ -684,7 +692,9 @@ function UpdatePopup(props) {
     setPlanesTime(null);
     // Close popup
     setLoading(false);
-    handleClose();
+    if ( update && ! update.persistModal ) {
+      handleClose();
+    }
   }
 
   // Loop function to get assignments from FSE
@@ -744,7 +754,9 @@ function UpdatePopup(props) {
       setFlightTime(date);
       // Close popup
       setLoading(false);
-      handleClose();
+      if ( update && ! update.persistModal ) {
+        handleClose();
+      }
     });
   }
   // My assignments Clear button clicked
@@ -758,7 +770,9 @@ function UpdatePopup(props) {
     setFlightTime(null);
     // Close popup
     setLoading(false);
-    handleClose();
+    if ( update && ! update.persistModal ) {
+      handleClose();
+    }
   }
 
   const panelChange = (panel) => (event, isExpanded) => {
