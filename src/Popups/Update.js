@@ -396,6 +396,8 @@ function UpdatePopup(props) {
   const [layersOptions, setLayersOptions] = React.useState([]);
   const [jobsLayers, setJobsLayers] = React.useState([]);
   const { readString } = usePapaParse();
+  const { persist } = props.settings.update;
+
 
   const areas = React.useState(() => getAreas(props.icaodata, props.icaos))[0];
 
@@ -527,8 +529,10 @@ function UpdatePopup(props) {
     storage.set('jobsLayers', jobsLayers.map(elm => elm.id));
     // Close popup
     setLoading(false);
-    if ( update && ! update.persistModal ) {
+    if ( ! persist ) {
       handleClose();
+    } else {
+      setExpanded(false);
     }
   }
   // Jobs Update button clicked
@@ -572,7 +576,7 @@ function UpdatePopup(props) {
     setJobsTime(null);
     // Close popup
     setLoading(false);
-    if ( update && ! update.persistModal ) {
+    if ( ! persist ) {
       handleClose();
     }
   }
@@ -675,8 +679,10 @@ function UpdatePopup(props) {
         storage.set('planeUser', planeUser);
         // Close popup
         setLoading(false);
-        if ( update && ! update.persistModal ) {
+        if ( ! persist ) {
           handleClose();
+        } else {
+          setExpanded(false);
         }
       });
     });
@@ -692,7 +698,7 @@ function UpdatePopup(props) {
     setPlanesTime(null);
     // Close popup
     setLoading(false);
-    if ( update && ! update.persistModal ) {
+    if ( ! persist ) {
       handleClose();
     }
   }
@@ -754,8 +760,10 @@ function UpdatePopup(props) {
       setFlightTime(date);
       // Close popup
       setLoading(false);
-      if ( update && ! update.persistModal ) {
+      if ( ! persist ) {
         handleClose();
+      } else {
+        setExpanded(false);
       }
     });
   }
@@ -770,7 +778,7 @@ function UpdatePopup(props) {
     setFlightTime(null);
     // Close popup
     setLoading(false);
-    if ( update && ! update.persistModal ) {
+    if ( ! persist ) {
       handleClose();
     }
   }
