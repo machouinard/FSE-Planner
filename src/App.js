@@ -118,7 +118,7 @@ const defaultSettings = {
     jobsPlanesRequests: 1,
     jobsPlanesMax: 10,
     express: true,
-    persist: false,
+    persist: true,
     expiration: ''
   },
   filters: {
@@ -838,6 +838,9 @@ function App() {
         setJobs={(jobs) => setJobs(transformJobs(jobs))}
         setPlanes={(planes) => setPlanes(transformPlanes(planes))}
         setFlight={(flight) => setFlight(transformJobs(flight))}
+        jobs={jobs}
+        planes={planes}
+        flight={flight}
         icaodata={icaodata}
         icaos={icaos}
         settings={settings}
