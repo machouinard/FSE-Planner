@@ -116,6 +116,31 @@ function CreditsPopup(props) {
       <DialogContent dividers sx={{ px: 3, pt: 0 }}>
         <div hidden={expanded !== 0}>
           <Paper sx={styles.content}>
+            <Typography variant="h5" sx={styles.version}>v1.19.4 (2025-03-16)</Typography>
+            <Typography variant="h6">Fixed</Typography>
+            <List dense>
+              <ListItem>Fixed panning bug on alternative map</ListItem>
+              <ListItem>Fixed missing airports on map</ListItem>
+            </List>
+          </Paper>
+          <Paper sx={styles.content}>
+            <Typography variant="h5" sx={styles.version}>v1.19.3 (2025-03-11)</Typography>
+            <Typography variant="h6">Changed</Typography>
+            <List dense>
+              <ListItem>Updated FSE airport list to include the 20 new airports</ListItem>
+              <ListItem>Updated FSE aircraft list</ListItem>
+              <ListItem>Updated project dependencies</ListItem>
+            </List>
+          </Paper>
+          <Paper sx={styles.content}>
+            <Typography variant="h5" sx={styles.version}>v1.19.2 (2024-12-15)</Typography>
+            <Typography variant="h6">Changed</Typography>
+            <List dense>
+              <ListItem>Updated FSE plane list (AW109SP and C408 - thx jonaseberle)</ListItem>
+              <ListItem>Updated project dependencies</ListItem>
+            </List>
+          </Paper>
+          <Paper sx={styles.content}>
             <Typography variant="h5" sx={styles.version}>v1.19.1 (2024-09-29)</Typography>
             <Typography variant="h6">Changed</Typography>
             <List dense>

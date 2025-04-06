@@ -62,6 +62,15 @@
     "fuelType": 1,
     "maxKg": 1846
   },
+  "Agusta Westwind AW109SP (X-Trident)": {
+    "maxPax": 7,
+    "maxCargo": 1048,
+    "fuelCapacity": 215,
+    "speed": 158,
+    "GPH": 60,
+    "fuelType": 1,
+    "maxKg": 1048
+  },
   "Airbus A320": {
     "maxPax": 149,
     "maxCargo": 30279,
@@ -133,6 +142,15 @@
     "GPH": 114,
     "fuelType": 1,
     "maxKg": 2080
+  },
+  "Airbus Helicopters H225": {
+    "maxPax": 19,
+    "maxCargo": 4378,
+    "fuelCapacity": 773,
+    "speed": 150,
+    "GPH": 200,
+    "fuelType": 1,
+    "maxKg": 4378
   },
   "Aircreation 582SL": {
     "maxPax": 1,
@@ -1105,6 +1123,15 @@
     "GPH": 30,
     "fuelType": 0,
     "maxKg": 1541
+  },
+  "Cessna 408 SkyCourier": {
+    "maxPax": 19,
+    "maxCargo": 2950,
+    "fuelCapacity": 720,
+    "speed": 210,
+    "GPH": 100,
+    "fuelType": 1,
+    "maxKg": 2950
   },
   "Cessna 414A Chancellor": {
     "maxPax": 7,
@@ -2559,7 +2586,7 @@
     "maxPax": 3,
     "maxCargo": 422,
     "fuelCapacity": 66,
-    "speed": 170,
+    "speed": 174,
     "GPH": 11,
     "fuelType": 0,
     "maxKg": 422
@@ -2716,6 +2743,15 @@
     "GPH": 60,
     "fuelType": 1,
     "maxKg": 1818
+  },
+  "Pilatus PC-24": {
+    "maxPax": 11,
+    "maxCargo": 400,
+    "fuelCapacity": 890,
+    "speed": 430,
+    "GPH": 260,
+    "fuelType": 1,
+    "maxKg": 2862
   },
   "Pilatus PC-6 Porter": {
     "maxPax": 11,
